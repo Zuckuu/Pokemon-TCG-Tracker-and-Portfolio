@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root{
+    --primary: #ee1515;
+    --secondary: #f0f0f0;
+    --offcolor:#222224;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body{
+    background-color: var(--secondary);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 
+
+NavBar 
+
+*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 10px;
+    border-bottom: 5px solid var(--offcolor);
+}
+
+.logo{
+    color: var(--primary);
+    font-size: 40px;
+}
+
+.link{
+    color: var(--primary);
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* 
+
+Main 
+
+*/
+
+main{
+    width: 100%;
+}
+
+.searchbar-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.searchbar{
+    width: 500px;
+    height: 50px;
+    border: 3px solid var(--offcolor);
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+hr{
+    margin-top: 10px;
+    width: 600px;
+    height: 3px;
+    background-color: var(--offcolor);
+}
+
+.filter-label{
+    padding-top: 5px;
+    color: var(--primary);
+}
+
+.filter-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.criteria{ 
+    display: flex;
+    margin: 5px;
+}
+
+.criteria-label{
+    margin-right: 3px;
+    color: var(--primary);
+}
+
+.selectbar{
+    border: 2px solid var(--offcolor);
+    border-radius: 5px;
+}
