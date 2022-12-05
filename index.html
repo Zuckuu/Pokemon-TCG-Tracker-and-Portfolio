@@ -4,32 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <title>PokeTGC-Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a7b215c748.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav id="nav">
+    <nav>
       <div class="logo-container">
         <a href="./index.html"><h1 class="logo">PokeTGC-Tracker</h1></a>
       </div>
       <div class="link-container">
-        <a href="" class="link">Collection</a>
+        <a href="#!" class="link viewFavorites">Collection</a>
         <a href="" class="link">Source Code</a>
         <a href="" class="link">For More!</a>
+        <select id="currency" class="currency-dropdown">
+          <option selected value="USD">USD</option>
+          <option value="bitcoin">BTC</option>
+          <option value="ethereum">ETH</option>
+          <option value="binance-coin">BNB</option>
+          <option value="tether">USDT</option>
+          <option value="cardano">ADA</option>
+          <option value="xrp">XRP</option>
+          <option value="dogecoin">DOGE</option>
+        </select>
       </div>
     </nav>
     <main>
       <div class="searchbar-container">
-        <input type="text" id="search" class="searchbar" placeholder="Search Up Your Card!" required/>
+        <form>
+          <div class="input-field">
+            <div class="col s12" id="inputColDiv">
+              <input
+                id="search"
+                type="search"
+                placeholder=" Search"
+                class="searchbar searchInput"
+                required
+              />
+            </div>
+          </div>
+        </form>
         <hr />
         <h3 class="filter-label">Filter Your Searches</h3>
         <div class="filter-container">
-          <!-- criteria 1 -->
           <div class="criteria">
-            <h4 class="criteria-label">Rarity:</h4>
-            <select id="dropdown1" class="selectbar">
-              <option value="">Choose</option>
+            <form action="#">
+              <label for="rarityCheck">
+                <input
+                  type="checkbox"
+                  name="rarityCheck"
+                  class="filled-in"
+                  id="rarityCheck"
+                />
+                <span class="criteria-label">Rarity</span>
+              </label>
+            </form>
+            <select disabled id="dropdown1" class="selectbar rarityDropdown">
+              <option value="" disabled selected>Choose</option>
               <option value="amazing rare">Amazing Rare</option>
               <option value="common">Common</option>
               <option value="legend">LEGEND</option>
@@ -55,21 +107,41 @@
               <option value="uncommon">Uncommon</option>
             </select>
           </div>
-          <!-- criteria 2 -->
+
           <div class="criteria">
-            <h4 class="criteria-label">Super-type:</h4>
-            <select id="dropdown2" class="selectbar">
-              <option value="">Choose</option>
+            <form action="#">
+              <label for="supertypeCheck">
+                <input
+                  type="checkbox"
+                  name="supertypeCheck"
+                  class="filled-in"
+                  id="supertypeCheck"
+                />
+                <span class="criteria-label">Supertype</span>
+              </label>
+            </form>
+            <select disabled id="dropdown2" class="selectbar rarityDropdown">
+              <option value="" disabled selected>Choose</option>
               <option value="energy">Energy</option>
               <option value="pokemon">Pokémon</option>
               <option value="trainer">Trainer</option>
             </select>
           </div>
-          <!-- criteria 3 -->
+
           <div class="criteria">
-            <h4 class="criteria-label">Sub-type:</h4>
-            <select id="dropdown3" class="selectbar">
-              <option value="">Choose</option>
+            <form action="#">
+              <label for="subtypeCheck">
+                <input
+                  type="checkbox"
+                  name="subtypeCheck"
+                  class="filled-in"
+                  id="subtypeCheck"
+                />
+                <span class="criteria-label">Subtype</span>
+              </label>
+            </form>
+            <select disabled class="selectbar rarityDropdown" id="dropdown3">
+              <option value="" disabled selected>Choose</option>
               <option value="break">BREAK</option>
               <option value="baby">Baby</option>
               <option value="basic">Basic</option>
@@ -99,18 +171,28 @@
               <option value="vmax">VMAX</option>
             </select>
           </div>
-          <!-- criteria 4 -->
+
           <div class="criteria">
-            <h4 class="criteria-label">Type:</h4>
-            <select id="dropdown4" class="selectbar">
-              <option value="">Choose</option>
+            <form action="#">
+              <label for="typeCheck">
+                <input
+                  type="checkbox"
+                  name="typeCheck"
+                  class="filled-in"
+                  id="typeCheck"
+                />
+                <span class="criteria-label">Type</span>
+              </label>
+            </form>
+            <select disabled class="selectbar rarityDropdown" id="dropdown4">
+              <option value="" disabled selected>Choose</option>
               <option value="colorless">Colorless</option>
               <option value="darkness">Darkness</option>
               <option value="dragon">Dragon</option>
               <option value="fairy">Fairy</option>
               <option value="fighting">Fighting</option>
               <option value="fire">Fire</option>
-              <option value="grass"> Grass</option>
+              <option value="grass">Grass</option>
               <option value="lightning">Lightning</option>
               <option value="metal">Metal</option>
               <option value="psychic">Psychic</option>
@@ -118,12 +200,90 @@
             </select>
           </div>
         </div>
-        <div class="pokeball-btn-container">
-            <button class="pokeball-btn">
-                <img src="./asset/pokeball-pixel-trans.png" class="pokeball-img" alt="">
+
+        <div class="btn-container">
+          <div class="pokeball-btn-container">
+            <button class="pokeball-btn searchButton">
+              <a href="#!" for="search"
+                ><img
+                  src="./assets/images/pokeball-pixel-trans.png"
+                  class="pokeball-img"
+                  alt=""
+              /></a>
             </button>
+          </div>
+
+          <div class="pokeball-btn-container">
+            <button class="pokeball-btn viewFavorites">
+              <h1 class="primary-color">Portfolio</h1>
+            </button>
+          </div>
+        </div>
+
+        <div class="search-container">
+          <div id="search-results" class="result-container">
+            <h3 class="resultsDivText"></h3>
+          </div>
+          <div class="searchDiv">
+            <div class="searchResults col l10 push-l2">
+              <div class="col s12">
+                <div class="card purple darken-3">
+                  <div class="card-content white-text"></div>
+                </div>
+              </div>
+              <div class="col s12">
+                <div class="card purple darken-3">
+                  <div class="card-content white-text"></div>
+                </div>
+              </div>
+              <div class="col s12">
+                <div class="card purple darken-3">
+                  <div class="card-content white-text"></div>
+                </div>
+              </div>
+              <div class="col s12">
+                <div class="card purple darken-3">
+                  <div class="card-content white-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
+    <footer class="page-footer purple darken-4 grey-text">
+      <div class="container">
+        <div class="footer-copyright">
+          <div class="container row">
+            <div class="col l9 s12">
+              Made for Northwestern Coding Bootcamp by Anthony Krueger and Jared
+              Donovan
+            </div>
+            <div class="col l3 s12">
+              <a
+                class="grey-text text-lighten-4 right"
+                href="https://github.com/Project01-TCG-Price-Tracker/TCG_Price_Tracker"
+                target="_blank"
+                >GitHub Repo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js%22%3E"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+        $(".parallax").parallax();
+      });
+    </script>
   </body>
 </html>

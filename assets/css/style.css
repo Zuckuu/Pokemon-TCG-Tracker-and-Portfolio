@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+:root {
+  --primary: #ee1515;
+  --secondary: #f0f0f0;
+  --offcolor: #222224;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+li{
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--secondary);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+  margin-left: 40px;
+  padding-top: 10px;
+  border-bottom: 5px solid var(--offcolor);
+}
+
+.primary-color{
+  color: var(--primary);
+}
+
+.purple{
+  color: purple;
+}
+
+.green{
+  color: green;
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 40px;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  color: var(--primary);
+  font-size: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.currency-dropdown {
+  margin-left: 20px;
+  border: 2px solid var(--offcolor);
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+main {
+  width: 100%;
+}
+
+.searchbar-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.searchbar {
+  width: 500px;
+  height: 50px;
+  border: 3px solid var(--offcolor);
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 10px;
+  width: 600px;
+  height: 3px;
+  background-color: var(--offcolor);
+}
+
+.filter-label {
+  padding-top: 5px;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.filter-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.criteria {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+}
+
+.criteria-label {
+  margin-right: 3px;
+  color: var(--primary);
+}
+
+.selectbar {
+  border: 2px solid var(--offcolor);
+  border-radius: 5px;
+}
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokeball-btn-container {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.pokeball-btn {
+  width: 130px;
+  padding-top: 5px;
+  border: 3px solid var(--offcolor);
+  border-radius: 10px;
+}
+
+.pokeball-btn:hover {
+  transform: scale(0.9);
+}
+
+.pokeball-btn:active {
+  transform: scale(1);
+}
+
+.pokeball-img {
+  width: 30px;
+}
+
+.search-container{
+  width: 100%;
+}
+
+.result-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+
+.page{
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.cardsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer{
+  margin: 8px;
+}
+
+.img-container{
+  display: flex;
+  flex-direction: column;
+}
+
+/* #opacityUp {
+    opacity: 100%;
+} */
+.resultsDivText {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.cardInfoDiv {
+  min-height: 860px;
+}
+.indexContainer {
+  min-height: 824px;
+  overflow: hidden;
+}
+.infoContainer {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border: 1px solid var(--grayweb);
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.card .card-content p {
+  padding-bottom: 1.25em;
+}
+.card .card-content p {
+  padding-bottom: 1.25em;
+}
+.card .card-content .card-title {
+  padding-bottom: 1em;
+  padding-top: 0.25em;
+  font-size: 30px;
+  border-bottom: solid 1px gray;
+  margin-bottom: 1em;
+}
+.materialboxed {
+  display: inline;
+}
+.backgroundImg {
+  position: fixed;
+}
+#currency {
+  margin-top: 0.75em;
+}
+html {
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+select {
+  font-size: 85%;
+}
+
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  border: 2px solid var(--logoyellowshadow);
+  background: var(--logoyellowshadow);
+}
+
